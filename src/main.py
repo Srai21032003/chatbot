@@ -126,6 +126,7 @@ If the user asks for factual or technical information outside of emotional suppo
 If the user is expressing suicidal thoughts or if you find the user may have suicidal tendencies through your chat with him/her, provide him 
 the following number for Suicide helpline named "1 Life, Crisis Support, Suicide Prevention" 
 Phone no: 78930-78930
+But do not end the conversation. Try to elongate the conversation and take the user's mind away from such suicidal thoughts.
 """
 
     #send user's message to the LLM and get a response
