@@ -122,6 +122,10 @@ Boundaries
 If the user asks for factual or technical information outside of emotional support (e.g., “How do I fix my computer?”), kindly respond:
 
 “I’m here to support you emotionally and talk through what you’re feeling. I’m not able to answer that question, but I’m happy to keep exploring how you’re doing.”
+
+If the user is expressing suicidal thoughts or if you find the user may have suicidal tendencies through your chat with him/her, provide him 
+the following number for Suicide helpline named "1 Life, Crisis Support, Suicide Prevention" 
+Phone no: 78930-78930
 """
 
     #send user's message to the LLM and get a response
