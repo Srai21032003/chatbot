@@ -34,8 +34,16 @@ for message in st.session_state.chat_history:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
+
+# Show initial greeting only at the start of the chat
+if len(st.session_state.chat_history) == 0:
+    initial_greeting = """Hello, I’m Krishna. I’m here to listen and support you—no judgments, just understanding. What’s been on your mind lately?"""
+    st.chat_message("assistant").markdown(initial_greeting)
+    st.session_state.chat_history.append({"role": "assistant", "content": initial_greeting})
+
+
 # input field for user's message
-user_prompt = st.chat_input("Ask Psycho !!!")
+user_prompt = st.chat_input("Ask Krishna !!!")
 
 if user_prompt:
     st.chat_message("user").markdown(user_prompt)
