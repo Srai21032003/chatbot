@@ -1,10 +1,11 @@
 # importing necessary libraries
 import streamlit as st
 from groq import Groq
+from dotenv import load_dotenv
 import os
 import json
 
-
+load_dotenv()
 # Streamlit page configuration
 st.set_page_config(
     page_title="PsychBOT",
@@ -13,12 +14,15 @@ st.set_page_config(
 )
 
 working_dir = os.path.dirname(os.path.abspath(__file__))
-config_data = json.load(open(f"{working_dir}/config.json"))
+# config_data = json.load(open(f"{working_dir}/config.json"))
 
-GROQ_API_KEY = config_data["GROQ_API_KEY"]
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
+if not GROQ_API_KEY:
+    raise ValueError("GROQ_API_KEY environment variable not set")
 
-# save the api key to the environment variable
-os.environ["GROQ_API_KEY"] = GROQ_API_KEY
+# GROQ_API_KEY = config_data["GROQ_API_KEY"]
+
+# os.environ["GROQ_API_KEY"] = GROQ_API_KEY
 
 client = Groq()
 
