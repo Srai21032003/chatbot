@@ -1,11 +1,9 @@
 # importing necessary libraries
 import streamlit as st
 from groq import Groq
-from dotenv import load_dotenv
 import os
 import json
 
-load_dotenv()
 # Streamlit page configuration
 st.set_page_config(
     page_title="PsychBOT",
