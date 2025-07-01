@@ -16,7 +16,7 @@ st.set_page_config(
 working_dir = os.path.dirname(os.path.abspath(__file__))
 # config_data = json.load(open(f"{working_dir}/config.json"))
 
-GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
 if not GROQ_API_KEY:
     raise ValueError("GROQ_API_KEY environment variable not set")
 
