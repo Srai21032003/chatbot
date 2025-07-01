@@ -1,2 +1,28 @@
-src/.env
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Environment variables and secrets
+.env
+*.env
 src/config.json
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# VS Code settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Anaconda/virtual environments
+.venv/
+env/
+venv/
